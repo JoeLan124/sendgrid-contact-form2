@@ -5,8 +5,8 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 async function sendEmail(req, res) {
   try {
     await sendgrid.send({
-      to: process.env.EMAIL_TO, // Your email where you'll receive emails
-      from: process.env.EMAIL_FROM, // your website email address here
+      to: `${process.env.EMAIL_TO}`, // Your email where you'll receive emails
+      from: `${process.env.EMAIL_FROM}`, // your website email address here
       subject: `Beantragung Berechtigung für ${req.body.surname} ${req.body.pnr}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="de">
