@@ -14,7 +14,7 @@ export default function MyForm() {
   const [pnrV, setPnrV] = useState("");
   const [typenew, setTypenew] = useState("");
   const [typedelete, setTypedelete] = useState("");
-  const [typeupdate, setTypeupdate] = useState("");
+  const [typeupdate, setTypeupdate] = useState(false);
 
   return (
     <div>
@@ -24,7 +24,7 @@ export default function MyForm() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="text-center border-2 border-gray-300 m-4 shadow-xl rounded-xl">
+      <div className="text-center border-2 border-gray-300 m-4 p-4 shadow-xl rounded-xl bg-gradient-to-r from-gray-200 to-gray-400">
         <div className=" mt-10 mx-auto w-1/1 text-left">
           <h1 className="font-extrabold text-2xl mb-4">
             Beantragung neue Berechtigung
@@ -61,7 +61,7 @@ export default function MyForm() {
             alert("send");
           }}
         >
-          <div className="ml-36 items-center mb-5 rounded-lg bg-gradient-to-r from-slate-300 to-white mr-36">
+          <div className="ml-36 items-center mb-5 rounded-lg bg-gradient-to-r from-gray-400 to-white mr-36">
             <div className="m-4 text-left">
               <div className=" mr-2">Vorname: </div>
               <input
@@ -105,7 +105,7 @@ export default function MyForm() {
           <p className="mt-2 ml-10 mb-4 text-left font-semibold">
             Angaben zum Vorgesetzten:
           </p>
-          <div className="ml-36 rounded-lg items-center mb-5 bg-gradient-to-r from-slate-300 to-white mr-36 text-left">
+          <div className="ml-36 rounded-lg items-center mb-5 bg-gradient-to-r from-gray-400 to-white mr-36 text-left">
             <div className="ml-4 mr-2">Nachname Vorgesetzer:</div>
             <input
               onChange={(e) => setSurnameV(e.target.value)}
@@ -122,10 +122,10 @@ export default function MyForm() {
             />
           </div>
 
-          <p className="mt-2 ml-10 mb-4 text-left font-semibold">
+          <p className="mt-2 ml-10 mb-4 text-left font-semibold ">
             Art der Berechtigung:
           </p>
-          <div className="ml-36 mb-5 rounded-lg bg-gradient-to-r from-slate-300 to-white mr-36 flex">
+          <div className="ml-36 mb-5 rounded-lg bg-gradient-to-r from-gray-400 to-white mr-36 flex">
             <div className="ml-2 mr-6">
               <label className="text-black mx-2 items-center">Neuanlage:</label>
               <input
@@ -135,7 +135,7 @@ export default function MyForm() {
                 name="default-radio"
                 onChange={(e) => {
                   setTypedelete(e.target.value);
-                  //setTypeupdate(false);
+                  setTypeupdate(false);
                 }}
                 className="w-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
@@ -149,7 +149,7 @@ export default function MyForm() {
                 name="default-radio"
                 onChange={(e) => {
                   setTypedelete(e.target.value);
-                  //setTypeupdate(false);
+                  setTypeupdate(false);
                 }}
                 className="mr-6 w-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
@@ -168,13 +168,13 @@ export default function MyForm() {
           </div>
           {typeupdate && (
             <div>
-              <div className="ml-36 mb-5 h-48 rounded-lg bg-gradient-to-r from-slate-300 to-white mr-36 flex">
-                <label className="text-black -ml-4 mt-2 ">
+              <div className="ml-36 mb-5 h-48 rounded-lg bg-gradient-to-r from-gray-400 to-white mr-36 flex">
+                <label className="text-black -ml-4 mt-4 ">
                   Grund für Änderung:
                 </label>
                 <textarea
                   onChange={(e) => setDescription(e.target.value)}
-                  className="border p-1 text-black resize-none my-2 h-36 w-full "
+                  className="border p-1 text-black resize-none mt-6 my-2 h-36 w-full "
                 />
               </div>
             </div>
