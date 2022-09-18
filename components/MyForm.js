@@ -12,9 +12,9 @@ export default function MyForm() {
   const [telefon, setTelefon] = useState("");
   const [surnameV, setSurnameV] = useState("");
   const [pnrV, setPnrV] = useState("");
-  const [typenew, setTypenew] = useState(false);
-  const [typedelete, setTypedelete] = useState(false);
-  const [typeupdate, setTypeupdate] = useState(false);
+  const [typenew, setTypenew] = useState("");
+  const [typedelete, setTypedelete] = useState("");
+  const [typeupdate, setTypeupdate] = useState("");
 
   return (
     <div>
@@ -34,7 +34,7 @@ export default function MyForm() {
             Bitte füllen Sie das Formular aus und klicken Sie anschießend auf
             senden.
           </p>
-          <p className="mt-2 text-left font-semibold">Angaben für:</p>
+          <p className="ml-10 mt-2 text-left font-semibold">Angaben für:</p>
         </div>
 
         <form
@@ -58,6 +58,7 @@ export default function MyForm() {
               },
               method: "POST",
             });
+            alert("send");
           }}
         >
           <div className="ml-36 items-center mb-5 rounded-lg bg-gradient-to-r from-slate-300 to-white mr-36">
@@ -133,8 +134,8 @@ export default function MyForm() {
                 type="radio"
                 name="default-radio"
                 onChange={(e) => {
-                  setTypedelete(e.target);
-                  setTypeupdate(false);
+                  setTypedelete(e.target.value);
+                  //setTypeupdate(false);
                 }}
                 className="w-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
@@ -147,8 +148,8 @@ export default function MyForm() {
                 type="radio"
                 name="default-radio"
                 onChange={(e) => {
-                  setTypedelete(e.target);
-                  setTypeupdate(false);
+                  setTypedelete(e.target.value);
+                  //setTypeupdate(false);
                 }}
                 className="mr-6 w-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
@@ -160,7 +161,7 @@ export default function MyForm() {
                 id="default-radio-2"
                 type="radio"
                 name="default-radio"
-                onChange={(e) => setTypeupdate(e.target)}
+                onChange={(e) => setTypeupdate(e.target.value)}
                 className="w-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
             </div>
@@ -188,9 +189,9 @@ export default function MyForm() {
               type="reset"
               value="zurücksetzen"
               onChange={(e) => {
-                setTypeupdate(false);
-                setTypenew(false);
-                setTypedelete(false);
+                // setTypeupdate(false);
+                // setTypenew(false);
+                // setTypedelete(false);
               }}
             ></input>
           </div>

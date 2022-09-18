@@ -4,9 +4,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      boxShadow: {
-        white: " 0px 0px 50px rgba(255, 255, 255, 0.4)",
-      },
+      // boxShadow: {
+      //   white: " 0px 0px 50px rgba(255, 255, 255, 0.4)",
+      // },
     },
   },
   variants: {
