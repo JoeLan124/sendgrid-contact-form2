@@ -15,6 +15,7 @@ export default function Home() {
 
       <main className="">
         {/* <ContactUs /> */}
+        {/* and api/sendgrid was the github template */}
 
         <MyForm />
       </main>
