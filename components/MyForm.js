@@ -58,9 +58,6 @@ export default function MyForm() {
               },
               method: "POST",
             });
-            alert(
-              ` ${firstname} ${surname} ${email} ${pnr} ${description} ${orga} ${telefon}`
-            );
           }}
         >
           <div className="ml-36 items-center mb-5 rounded-lg bg-gradient-to-r from-gray-400 to-white mr-36">
