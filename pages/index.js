@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <ContactUs />
+        {/* <ContactUs /> */}
 
-        {/* <MyForm /> */}
+        <MyForm />
       </main>
     </div>
   );
