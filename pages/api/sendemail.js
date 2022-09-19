@@ -8,8 +8,8 @@ const email_to1 = process.env.EMAIL_TO;
 async function sendEmail(req, res) {
   try {
     await sendgrid.send({
-      to: "johannes.langosch@googlmail.com", // Your email where you'll receive emails
-      from: "johannes.langosch@googlmail.com", // your website email address here
+      to: "johannes.langosch@nexgo.de", // Your email where you'll receive emails
+      from: "johannes.langosch@googlemail.com", // your website email address here
       subject: `Beantragung Berechtigung für ${req.body.surname} ${req.body.pnr}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="de">
