@@ -17,7 +17,9 @@ export default function Home() {
         {/* <ContactUs /> */}
         {/* and api/sendgrid was the github template */}
 
-        <MyForm />
+        {/* my solution via MyForm */}
+        {/* <MyForm /> */}
+        <p>This page is still under construction, not in use</p>
       </main>
     </div>
   );
