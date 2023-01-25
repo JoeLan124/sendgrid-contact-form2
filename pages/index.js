@@ -9,7 +9,10 @@ export default function Home() {
     <div className="">
       <Head>
         <title>Forumular zur Datenerhebung</title>
-        <meta name="description" content="Formular zur Datenerhebung" />
+        <meta
+          name="description"
+          content="Formular zur Datenerhebung"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -18,8 +21,8 @@ export default function Home() {
         {/* and api/sendgrid was the github template */}
 
         {/* my solution via MyForm */}
-        {/* <MyForm /> */}
-        <p>This page is still under construction, not in use</p>
+        <MyForm />
+        {/* <p>This page is still under construction, not in use</p> */}
       </main>
     </div>
   );
