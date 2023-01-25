@@ -21,8 +21,10 @@ export default function Home() {
         {/* and api/sendgrid was the github template */}
 
         {/* my solution via MyForm */}
-        <MyForm />
-        {/* <p>This page is still under construction, not in use</p> */}
+        {/* <MyForm /> */}
+        <p>
+          This page is still under construction, not in use
+        </p>
       </main>
     </div>
   );
